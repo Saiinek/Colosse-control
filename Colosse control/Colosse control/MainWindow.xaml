@@ -1,0 +1,28 @@
+﻿<Window x:Class="Colosse_control.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Colosse_control"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Height="22" Padding="2">
+            <MenuItem Header="Commande">
+                <MenuItem x:Name="AffCo" Header="Affichage complet" Click="AffCo_Click"/>
+            </MenuItem>
+            <MenuItem Header="Options">
+                <MenuItem Header="Tableau commande"/>
+                <MenuItem Header="logs"/>
+            </MenuItem>
+            <MenuItem Header="Connection" HorizontalAlignment="Right" Click="Connection_Click"/>
+        </Menu>
+        <Frame x:Name="ContentFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="NotificationContent" Grid.RowSpan="2" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
